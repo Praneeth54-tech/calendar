@@ -1,0 +1,193 @@
+@import url(../../globall.css);
+:root {
+  --vanilla-calendar-bg-color: #fff;
+  --vanilla-calendar-border-radius: 5px;
+  --vanilla-calendar-border-color: #e7e9ed;
+  --vanilla-calendar-today-bg-color: #e7e9ed;
+  --vanilla-calendar-today-color: #333;
+  --vanilla-calendar-selected-bg-color: #538fcd;
+  --vanilla-calendar-selected-color: #fff;
+  --vanilla-calendar-selected-radius: 5px;
+}
+
+
+
+/* newly addes styles */
+.vanilla-calendar .vanilla-calendar-header svg{
+  fill: var(--brand_color);
+  opacity: 0.9;
+}
+
+.vanilla-calendar *,
+.vanilla-calendar *:before,
+.vanilla-calendar *:after {
+  box-sizing: border-box;
+}
+.vanilla-calendar {
+  background-color: var(--vanilla-calendar-bg-color);
+  border-radius: var(--vanilla-calendar-border-radius);
+  border: solid 1px var(--vanilla-calendar-border-color);
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .vanilla-calendar {
+    width: auto;
+  }
+}
+.vanilla-calendar .vanilla-calendar-btn {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: button;
+  background: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  min-width: 27px;
+  outline: 0;
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+  /* &:active {
+    border-radius: var(--vanilla-calendar-border-radius);
+    box-shadow: 0 0 0 2px rgba(var(--vanilla-calendar-today-bg-color), 0.1);
+  } */
+}
+.vanilla-calendar .vanilla-calendar-header {
+  align-items: center;
+  display: flex;
+  padding: 19.2px 22.4px;
+  
+  font-family: inherit;
+}
+
+.vanilla-calendar .vanilla-calendar-header__label {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.vanilla-calendar .vanilla-calendar-week {
+  background-color: #E7E9ED;
+  display: flex;
+  flex-wrap: wrap;
+} /* */
+.vanilla-calendar .vanilla-calendar-week span {
+  color: black;
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 14.28%;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 780px){
+  .vanilla-calendar .vanilla-calendar-week span{
+    font-size: 0.8rem;
+  }
+}
+.vanilla-calendar .vanilla-calendar-body {
+  background-color: rgba(var(--vanilla-calendar-selected-bg-color), 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.vanilla-calendar .vanilla-calendar-date {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  max-width: 14.28%;
+  padding: 5px 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 50px;
+  height: 65px;
+  border-radius: 50%;
+}
+.vanilla-calendar .vanilla-calendar-date--active span{
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 45px;
+  padding-top: 10px;
+}/* */
+.vanilla-calendar .vanilla-calendar-date--today span {
+  background: transparent;
+  border: 2px solid var(--brand_color);
+  color: var(--vanilla-calendar-today-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box; 
+  padding-top: 7px;
+}/* */
+.vanilla-calendar .vanilla-calendar-date--selected span {
+  background-color: var(--light_color);
+  border: none;
+  color: #fff;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+.vanilla-calendar .vanilla-calendar-date--disabled {
+  border-radius: 0;
+  cursor: not-allowed;
+  opacity: 0.5;
+  padding-top: 14px;
+}
+.vanilla-calendar .vanilla-calendar-date--active:hover span {
+  background: var(--dark_color);
+  border: none;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
+  height: 45px;
+  width: 45px;
+  }
+  
+#evnts{
+  margin-right: 0px;
+  overflow-y: scroll;
+  max-height: 450px;
+  top:100px;
+  font-size: 16px;
+  right: 35px;
+  overflow-x:hidden;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#evnts::-webkit-scrollbar{
+  width: 6px;
+  background:#ffffff;
+  border-radius: 8px 8px 8px 8px;  
+}
+#evnts::-webkit-scrollbar-thumb{
+  background-color: #0000002e;
+  border-radius: 8px 8px 8px 8px;
+
+}
+#z1{
+  padding-left: 100px;
+}

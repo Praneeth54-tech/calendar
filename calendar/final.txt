@@ -1,0 +1,7 @@
+Only change these 3
+
+	Line 101: .vanilla-calendar .vanilla-calendar-date--active {
+	Line 105: .vanilla-calendar .vanilla-calendar-date--today {
+	Line 110: .vanilla-calendar .vanilla-calendar-date--selected {
+
+
